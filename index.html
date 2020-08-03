@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Weed</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+	<main class="main">
+		<nav class="navbar">
+			<div class="img">
+				<img src="./unnamed.png" alt="">
+			</div>
+			<div class="nav-links">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Service</a></li>
+					<li><a href="#">Accesories</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">About</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="information">
+			<img src="http://images.ctfassets.net/d6skzop43my5/6OyxwWln6Ke5UuX8hHLzZZ/5ae77b5f60dada8a8be63a0102ac7e45/nokia_5_3-front-cyan.png" alt="">
+			<div class="overlay"></div>
+			<div id="circle">
+				<div class="features one">
+					<div class="camera">
+						<h3>Camera</h3>
+						<p>Camera is Awesome</p>
+					</div>
+				</div>
+				<div class="features two">
+					<div class="camera">
+						<h3>Battery</h3>
+						<p>Battery 5000mAh</p>
+					</div>
+				</div>
+				<div class="features three">
+					<div class="camera">
+						<h3>Display</h3>
+						<p>5"6 Long Lasting</p>
+					</div>
+				</div>
+				<div class="features four">
+					<div class="camera">
+						<h3>Mobile</h3>
+						<p>RealMi + Samsung Combination</p>
+					</div>
+				</div>
+			</div>
+			
+		
+		</div>
+		<div class="butn">
+			<button id="next">Next</button>
+			<button id="prev">Prev</button>
+		</div>
+	</main>
+	
+
+	<script>
+		var circle = document.getElementById("circle");
+		var rotatevalue = circle.style.transform;
+		var nextbtn = document.getElementById("next")
+		var prevbtn = document.getElementById("prev")
+		nextbtn.onclick = function(){
+			var sumvalue = rotatevalue + "rotate(-90deg)";
+			circle.style.transform = sumvalue;
+			rotatevalue = sumvalue;
+		};
+		prevbtn.onclick = function(){
+			var sumvalue = rotatevalue + "rotate(90deg)";
+			circle.style.transform = sumvalue;
+			rotatevalue = sumvalue;
+		};
+	</script>
+</body>
+
+</html>
